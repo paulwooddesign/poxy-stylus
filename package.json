@@ -1,0 +1,27 @@
+{
+  "name": "poxy-stylus",
+  "version": "0.0.1",
+  "description": "POXY",
+  "main": "poxy.import.stylus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulwooddesign/poxy-stylus.git"
+  },
+  "dependencies": {
+  },
+  "keywords": [
+    "grid",
+    "fraction",
+    "ratio"
+  ],
+  "author": {
+    "name": "Paul Wood"
+  },
+  "maintainers": [
+    {
+      "name": "paulwood",
+      "email": "paulwooddesign@gmail.com"
+    }
+  ],
+  "directories": {},
+}
