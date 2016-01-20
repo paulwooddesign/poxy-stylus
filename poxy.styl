@@ -46,7 +46,7 @@ poxy-x(zone, zone_min, zone_max, numerator_range, gutter_x_width, offset)
       \[class\*\={zone}{n}{d}\]._3a__ ~ * > * > *:nth-child(1),
       \[class\*\={zone}{n}{d}\]._3b__ ~ * > * > *:nth-child(2),
       \[class\*\={zone}{n}{d}\]._3c__ ~ * > * > *:nth-child(3)
-        lost-column n/d copy_width gutter_x
+        poxy-x n/d copy_width gutter_x
 
 poxy-y(zone, zone_min, zone_max, numerator_range, gutter_x_width, offset)
   for n in numerator_range
@@ -85,29 +85,29 @@ poxy-y(zone, zone_min, zone_max, numerator_range, gutter_x_size, offset)
 // &:after
 //   border-bottom rgba(guide_color, guide_opacity) solid 1px
 
+poxy-core()
+  section
+    ps gy
+    pn gy*2
+    me -(gx)
+    &:nth-child(2n+2)
+      bg rgba(#000, .2)
 
-section
-  ps gy
-  pn gy*2
-  me -(gx)
-  &:nth-child(2n+2)
-    bg rgba(#000, .2)
+  header
+    w copy_width
 
-header
-  w copy_width
+  .sw
+    mn -(gy)
+    mw -(gx)
 
-.sw
-  mn -(gy)
-  mw -(gx)
+  .cw
+    bgc #999
+    pe gx
+    box-sizing content-box
+    lost-center ((((zone_min - (offset)) * (column_width + gutter_x_size) - gutter_x_size) / unit) + ((gutter_x_size) / unit))
 
-.cw
-  bgc #999
-  pe gx
-  box-sizing content-box
-  lost-center ((((zone_min - (offset)) * (column_width + gutter_x_size) - gutter_x_size) / unit) + ((gutter_x_size) / unit))
-
-.cw > *
-  float left
-  mw gx
-  ms gy
-  of hidden
+  .cw > *
+    float left
+    mw gx
+    ms gy
+    of hidden
