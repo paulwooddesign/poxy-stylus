@@ -2,7 +2,10 @@
   "name": "poxy-stylus",
   "version": "0.0.2",
   "description": "Stylus mixins and utilities",
-  "main": "poxy.styl",
+  "main": "lib/poxy.js",
+  "engines": {
+    "node": "*"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/paulwooddesign/poxy-stylus.git"
