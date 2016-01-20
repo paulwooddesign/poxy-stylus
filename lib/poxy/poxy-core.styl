@@ -6,17 +6,21 @@ poxy-core(gx, gy)
     box-sizing border-box
   section
     padding-top gy
-    padding-bottom gy*2
+    padding-bottom gy
     margin-right -(gx)
   header
     width copy_width
   .sw
-    margin-top -(gy)
     margin-left -(gx)
   .cw
     padding-right gx
+    padding-top gx
     box-sizing content-box
     poxy-cw ((((zone_size - (offset)) * (column_width + gutter_x_size) - gutter_x_size) / unit) + ((gutter_x_size) / unit))
+  .cw .cw
+    background transparent !important
+    margin-left -(gx) !important
+
   .cw > *
     float left
     margin-left gx
