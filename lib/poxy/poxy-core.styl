@@ -1,0 +1,23 @@
+/////////////////////////////////
+// POXY CORE
+/////////////////////////////////
+poxy-core(gx, gy)
+  *, *::after, *::before
+    box-sizing border-box
+  section
+    padding-top gy
+    padding-bottom gy*2
+    margin-right -(gx)
+  header
+    width copy_width
+  .sw
+    margin-top -(gy)
+    margin-left -(gx)
+  .cw
+    padding-right gx
+    box-sizing content-box
+    poxy-cw ((((zone_min - (offset)) * (column_width + gutter_x_size) - gutter_x_size) / unit) + ((gutter_x_size) / unit))
+  .cw > *
+    float left
+    margin-left gx
+    margin-bottom gy
