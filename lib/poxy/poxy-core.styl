@@ -16,7 +16,7 @@ poxy-core(gx, gy)
   .cw
     padding-right gx
     box-sizing content-box
-    poxy-cw ((((zone_min - (offset)) * (column_width + gutter_x_size) - gutter_x_size) / unit) + ((gutter_x_size) / unit))
+    poxy-cw ((((zone_size - (offset)) * (column_width + gutter_x_size) - gutter_x_size) / unit) + ((gutter_x_size) / unit))
   .cw > *
     float left
     margin-left gx
