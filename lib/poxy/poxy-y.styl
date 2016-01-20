@@ -2,8 +2,8 @@
 // POXY STYLES
 /////////////////////////////////
 poxy-y(zone, numerator_array, denominator_array, gutter_x_width, offset)
-  for n in numerator_range
-    for d in denominator_range
+  for n in numerator_array
+    for d in denominator_array
       \[class\*\={zone}\_{n}{d}\],
       \[class\*\={zone}\_{n}{d}\]._1__ ~ *,
       \[class\*\={zone}\_{n}{d}\]._2__ ~ * > *,
@@ -14,8 +14,8 @@ poxy-y(zone, numerator_array, denominator_array, gutter_x_width, offset)
         poxy-y n/d copy_width gutter_x
 
 poxy-y-rem(zone, numerator_array, denominator_array, gutter_x_width, offset)
-  for n in numerator_range
-    for d in denominator_range
+  for n in numerator_array
+    for d in denominator_array
       \[class\*\={zone}\_{n}{d}\],
       \[class\*\={zone}\_{n}{d}\]._1__ ~ *,
       \[class\*\={zone}\_{n}{d}\]._2__ ~ * > *,
