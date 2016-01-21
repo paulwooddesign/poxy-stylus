@@ -1,9 +1,21 @@
 /////////////////////////////////
 // POXY STYLES
 /////////////////////////////////
-poxy-y(zone, zone_min, zone_max, numerator_range, gutter_x_width, offset)
-  for n in numerator_range
-    for d in denominator_range
+poxy-y(zone, numerator_array, denominator_array, gutter_x_width, offset)
+  for n in numerator_array
+    for d in denominator_array
+      \[class\*\={zone}\_{n}{d}\]
+        poxy-y n/d copy_width gutter_x
+
+poxy-y-rem(zone, numerator_array, denominator_array, gutter_x_width, offset)
+  for n in numerator_array
+    for d in denominator_array
+      \[class\*\={zone}\_{n}{d}\]
+        poxy-y-rem n/d copy_width gutter_x
+
+poxy-y-target(zone, numerator_array, denominator_array, gutter_x_width, offset)
+  for n in numerator_array
+    for d in denominator_array
       \[class\*\={zone}\_{n}{d}\],
       \[class\*\={zone}\_{n}{d}\]._1__ ~ *,
       \[class\*\={zone}\_{n}{d}\]._2__ ~ * > *,
@@ -12,3 +24,15 @@ poxy-y(zone, zone_min, zone_max, numerator_range, gutter_x_width, offset)
       \[class\*\={zone}\_{n}{d}\]._3b__ ~ * > * > *:nth-child(2),
       \[class\*\={zone}\_{n}{d}\]._3c__ ~ * > * > *:nth-child(3)
         poxy-y n/d copy_width gutter_x
+
+poxy-y-target-rem(zone, numerator_array, denominator_array, gutter_x_width, offset)
+  for n in numerator_array
+    for d in denominator_array
+      \[class\*\={zone}\_{n}{d}\],
+      \[class\*\={zone}\_{n}{d}\]._1__ ~ *,
+      \[class\*\={zone}\_{n}{d}\]._2__ ~ * > *,
+      \[class\*\={zone}\_{n}{d}\]._3__ ~ * > * > *,
+      \[class\*\={zone}\_{n}{d}\]._3a__ ~ * > * > *:nth-child(1),
+      \[class\*\={zone}\_{n}{d}\]._3b__ ~ * > * > *:nth-child(2),
+      \[class\*\={zone}\_{n}{d}\]._3c__ ~ * > * > *:nth-child(3)
+        poxy-y-rem n/d copy_width gutter_x
